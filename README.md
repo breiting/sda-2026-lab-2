@@ -12,4 +12,4 @@ We will touch:
 
 ## Part B — Student exercise
 
-Work in the `part2` directory and follow the `TODO.md`.
+Work in the `part2` directory, read the `README.md` and follow the `TODO.md`.
