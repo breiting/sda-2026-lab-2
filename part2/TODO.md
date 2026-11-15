@@ -16,29 +16,43 @@
 - [ ] Implement `TemperatureSensor::SetTemperature()` and check the `Name()` and `Temperature()` getters.
 - [ ] Run the independent-state test without changing it.
 
-**STOP & REVIEW:** Why are data members private? Why are getters `const`? What is the difference between `const` on a parameter and on a member function?
+```bash
+> ./sensor_tests --gtest_filter=TemperatureSensorTest.ObjectsHaveIndependentState
+```
+
+**STOP & REVIEW:**
+
+- Why are data members private?
+- Why are getters `const`?
+- What is the difference between `const` on a parameter and on a member function?
 
 ### CP3 — STL and measurement history
 
-- [ ] Implement `MeasurementHistory::Add`, `Count`, and `Average` using `std::vector<double>`.
+- [ ] Implement `MeasurementHistory::Add`, `Count`, and `Average`
 - [ ] Empty average returns `0.0`. Run the targeted test.
 
-**STOP & REVIEW:** Why must an empty vector be handled? What does `push_back` do?
+**STOP & REVIEW:**
+
+- What does `push_back` do?
 
 ### CP4 — Composition
 
 - [ ] Extend `SetTemperature` to record every measurement in the owned `m_History`.
 - [ ] Run the history test; draw `TemperatureSensor` composed of `MeasurementHistory`.
 
-**STOP & REVIEW:** Which object owns the history? How does an owning member differ from a non-owning reference?
+**STOP & REVIEW:**
+
+- Which object owns the history?
+- How does an owning member (composition) differ from a non-owning reference (association)?
 
 ### CP5 — One-to-many and association
 
 - [ ] Implement `SensorStation::AddSensor`, `SensorCount`, and `SensorAt` (use `vector::at`).
-- [ ] Run all tests; inspect the demo; sketch multiplicities in UML.
-- [ ] Inspect `git diff` and commit the changes.
+- [ ] Run all tests
 
-**STOP & REVIEW:** Why is `vector<TemperatureSensor>` composition? How would a `SensorDisplay` holding `const TemperatureSensor&` express a directed association instead?
+**STOP & REVIEW:**
+
+- Why is `vector<TemperatureSensor>` composition?
 
 ## Bonus – Add an Existing Sensor
 

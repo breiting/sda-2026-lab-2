@@ -1,7 +1,6 @@
 #include "sda/SensorStation.hpp"
 
 #include <stdexcept>
-#include <utility>
 
 namespace sda {
 
