@@ -53,3 +53,19 @@ Extend `SensorStation` so that an existing `TemperatureSensor` object can be add
 - Modifying the original sensor afterward does not affect the stored copy.
 
 Write at least one GoogleTest to verify this behavior.
+
+## Advanced Challenge – Sensor Display
+
+Implement a class `SensorDisplay` that displays the current temperature of an existing `TemperatureSensor`.
+
+Unlike `SensorStation`, the display must **not own or copy** the sensor.
+
+**Acceptance Criteria**
+
+- The constructor accepts a `const TemperatureSensor&`.
+- The display provides `double CurrentTemperature() const`.
+- `CurrentTemperature()` returns the current temperature of the referenced sensor.
+- If the original sensor's temperature changes, the display returns the updated value.
+- Creating a display must not create a copy of the sensor.
+
+Write GoogleTests to verify this behavior.
