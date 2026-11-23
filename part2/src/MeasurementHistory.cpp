@@ -3,17 +3,25 @@
 namespace sda {
 
 void MeasurementHistory::Add(double value) {
-  // TODO CP3: append value to m_Values.
-  (void)value;
+    m_Values.push_back(value);
 }
 
 std::size_t MeasurementHistory::Count() const {
-  // TODO CP3: return number of stored values.
-  return 0;
+    return m_Values.size();
 }
 
 double MeasurementHistory::Average() const {
-  // TODO CP3: return 0.0 if empty; otherwise arithmetic mean.
-  return 0.0;
+    if (m_Values.empty()) {
+        return 0.0;
+    }
+
+    double sum = 0.0;
+
+    for (double value : m_Values) {
+        sum += value;
+    }
+
+    return sum / m_Values.size();
 }
-} // namespace sda
+
+}  // namespace sda
